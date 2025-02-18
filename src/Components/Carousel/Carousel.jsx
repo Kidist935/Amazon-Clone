@@ -1,7 +1,8 @@
 import React from 'react'
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import { image } from './img/data'
 import { Carousel } from 'react-responsive-carousel'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+
 import classes from "../Carousel/carousel.module.css"
 
 function CarouselEffect() {
@@ -9,8 +10,8 @@ function CarouselEffect() {
     <div>
      <Carousel autoPlay={true} infiniteLoop={true} showIndicators={false} showThumbs={false}>
       {
-       image.map((ImageListLink) =>{
-        return <img src={ImageListLink} />
+       image.map((ImageListLink, i) =>{
+        return <img src={ImageListLink} alt="" key={i}/>
        })
 
       }
