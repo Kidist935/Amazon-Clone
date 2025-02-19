@@ -8,7 +8,7 @@ import classes from "../Carousel/carousel.module.css"
 function CarouselEffect() {
   return (
     <div>
-     <Carousel autoPlay={true} infiniteLoop={true} showIndicators={false} showThumbs={false}>
+     <Carousel autoPlay={true} infiniteLoop={true} showIndicators={false} showThumbs={false} showStatus={false}>
       {
        image.map((ImageListLink, i) =>{
         return <img src={ImageListLink} alt="" key={i}/>
