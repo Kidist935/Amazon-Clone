@@ -17,9 +17,11 @@ function Routeing() {
         <Route path="/auth" element={< SignIn/>}/>
         <Route path="/payments" element={<Payment/>}/>
         <Route path="/orders" element={<Orders/>}/>
+        <Route path="/category/:categoryName" element={<Result/>}/>
+        <Route path="/products/:productId" element={<ProductDetail/>}/>
         <Route path="/cart" element={<Cart/>}/>
-        <Route path="/product" element={<ProductDetail/>}/>
-        <Route path="/result" element={<Result/>}/>
+        
+        
 
 
       </Routes>
