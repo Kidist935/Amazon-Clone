@@ -2,11 +2,14 @@
 import { initializeApp } from "firebase/app";
 // for authentication
 import { getAuth } from "firebase/auth";
-import{ getFirestore  } from "firebase/firestore";
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore"
+import "firebase/compat/auth"
+
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCF_8gj1JbhNho6TUan15ofjwAtmwM6wDA",
+  apiKey: "AIzaSyCF_8gj1JbhNho6TUan15ofjwAtmwM6wDA", 
   authDomain: "clone-acedc.firebaseapp.com",
   projectId: "clone-acedc",
   storageBucket: "clone-acedc.firebasestorage.app",
@@ -15,6 +18,6 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const app = firebase.initializeApp(firebaseConfig);
 export const auth = getAuth(app);
-export const db = getFirestore(app);
+export const db = app.firestore();
