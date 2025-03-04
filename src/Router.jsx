@@ -17,6 +17,7 @@ function Routeing() {
         <Route path="/auth" element={<Auth/>}/>
         <Route path="/payments" element={<Payment/>}/>
         <Route path="/orders" element={<Orders/>}/>
+        {/* categoryName is a dynamic parameter extracted using useParams */}
         <Route path="/category/:categoryName" element={<Result/>}/>
         <Route path="/products/:productId" element={<ProductDetail/>}/>
         <Route path="/cart" element={<Cart/>}/>

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 function CategoryCard({ data }) {
   return (
     <div className={classes.category}>
+       {/* creating link to a category page  */}
       <Link to={`/category/${data.name}`}>
         <span>
           <h2>{data?.title}</h2>

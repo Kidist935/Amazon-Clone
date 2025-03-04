@@ -9,7 +9,7 @@ function Product() {
     const [isLoading, setIsLoading] = useState(false)
     useEffect(() => { 
         
-        axios .get("https://fakestoreapi.com/products") 
+        axios.get("https://fakestoreapi.com/products") 
         .then((res) => { 
             setProducts(res.data); 
             setIsLoading(false)
@@ -30,12 +30,7 @@ function Product() {
             return <ProductCard renderAdd={true} product={singleProduct} key={singleProduct.id} />; 
         })} 
         </section>)
-   }
-
-
-  
-   
-   
+   } 
    </>
     
   )

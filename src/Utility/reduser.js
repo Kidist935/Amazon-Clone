@@ -5,7 +5,9 @@ export const initialState = {
   user: null,
 };
 
+// reducer listens for actions and modifies the state accordingly
 export const reducer = (state = initialState, action) => {
+  // action.type- determines which state change should occur
   switch (action.type) {
     case Type.ADD_TO_BASKET:
       // Check if the item already exists in the cart
@@ -13,7 +15,9 @@ export const reducer = (state = initialState, action) => {
         (item) => item.id === action.item.id
       );
       if (!existingItem) {
+        // if not create a new basket array
         return {
+          // state- is the current global state(contain properties)
           ...state,
           basket: [...state.basket, { ...action.item, amount: 1 }],
         };

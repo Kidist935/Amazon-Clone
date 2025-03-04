@@ -11,6 +11,7 @@ import Loder from "../../Components/Loder/Loder";
 function Result() {
   const [results, setResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false)
+  // useParams allows to access dynamic parameters from url
   const { categoryName } = useParams();
   useEffect(() => {
     
@@ -32,6 +33,7 @@ function Result() {
         <h1 style={{ padding: "30px" }}>Results</h1>
         <p style={{ padding: "30px" }}> Category / {categoryName} </p>
         <hr/>
+        {/* if isLoding true it comes loder component else the data is exist and display the product details */}
         {isLoading? (<Loder/>) : (<div className={classes.products_container}>
           
           {results?.map((product) => (

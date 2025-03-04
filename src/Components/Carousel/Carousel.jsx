@@ -8,9 +8,10 @@ import classes from "../Carousel/carousel.module.css"
 function CarouselEffect() {
   return (
     <div>
+      {/* carousel(slider) is UI Component allows users to cycle through a collection of images  */}
      <Carousel autoPlay={true} infiniteLoop={true} showIndicators={false} showThumbs={false} showStatus={false}>
       {
-       image.map((ImageListLink) =>{
+       image?.map((ImageListLink) =>{
         return <img src={ImageListLink} alt="" key={ImageListLink}/>
        })
 

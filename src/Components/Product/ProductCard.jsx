@@ -13,6 +13,8 @@ function ProductCard({product, flex, renderDesc, renderAdd}) {
 
    const addToCart =() =>{
     dispatch({
+      // send the action to the reducer
+      // the action has a type tells the reducer what changes to make
       type:Type.ADD_TO_BASKET,
       item:{
         image, title, id, rating, price, description
