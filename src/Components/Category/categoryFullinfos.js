@@ -18,8 +18,8 @@ export const categoryInfos = [
       "https://m.media-amazon.com/images/I/81Y6r7df7OL._AC_SX569_.jpg",
   },
   {
-    title: "Jewelry",
-    name: "jewelry",
+    title: "jewelery",
+    name: "jewelery",
     imgLink:
       "https://m.media-amazon.com/images/I/81YUtidOP5L._AC_SY675_.jpg",
   },
