@@ -28,25 +28,11 @@
   position: relative;
   margin-top: -10%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  max-width: 1600px;
+  gap: 50px;
+  margin-left: auto;
+  margin-right: auto;
   place-items: center;
 }
 
-/* media query */
-@media screen and (max-width: 576px) {
-  .category__container {
-    display: grid;
-    /* flex-direction: column !important; */
-    height: auto;
-  }
-}
-@media screen and (max-width: 768px) {
-  .category__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    flex-direction: column !important;
-    height: auto;
-    width: auto;
-    overflow-x: hidden;
-}
-}
