@@ -14,7 +14,7 @@ function Result() {
   // useParams allows to access dynamic parameters from url
   const { categoryName } = useParams();
   useEffect(() => {
-    
+    setIsLoading(true)
     axios.get(`${productUrl}/products/category/${categoryName}`)
       .then((res) => {
         setResults(res.data);

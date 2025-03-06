@@ -49,11 +49,6 @@ function ProductCard({product, flex, renderDesc, renderAdd}) {
           }
           
       </div>
-
-
-
-
-
     </div>
   )
 }
