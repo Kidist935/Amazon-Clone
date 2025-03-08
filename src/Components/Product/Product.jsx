@@ -7,6 +7,7 @@ import Loder from "../Loder/Loder";
 function Product() {
     const [products, setProducts] = useState([]);
     const [isLoading, setIsLoading] = useState(false)
+ 
     useEffect(() => { 
         setIsLoading(true)
         axios.get("https://fakestoreapi.com/products") 
@@ -20,10 +21,12 @@ function Product() {
             setIsLoading(false)
         }); 
     }, []); 
+
     
   return ( 
   
    <>
+  
    {
     isLoading?(<Loder/>) : ( <section className={classes.products_container}>
         {products?.map((singleProduct) => { 
