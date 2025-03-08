@@ -35,7 +35,7 @@ function Payment() {
     e.error?.message ? setCardError(e.error?.message) : setCardError("");
   };
 
-  const handlePayment = async (e) => {
+  const handlePayment = async(e) => {
     e.preventDefault();
 
     // 1. backend or functions----contact to the client secret
@@ -80,8 +80,9 @@ function Payment() {
       setProcessing(false);
       navigate("/orders", {state:{msg:"you have placed new order"}})
 
-    } catch (error) {
+    }catch(error) {
       setProcessing(false);
+      alert("payment failed.please try again")
     }
   };
   return (
